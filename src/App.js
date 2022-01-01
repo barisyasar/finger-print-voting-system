@@ -19,7 +19,7 @@ function App() {
           <Route path='voter' element={<Voter />} />
         </Routes>
       </BrowserRouter>
-      
+
     </div>
   );
 }

@@ -1,11 +1,10 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
+
 .App {
-  text-align: center;
   background-color: #282c34;
   height: 100vh;
   color: white;
+}
+h1 {
+  text-align: center;
 }
 
