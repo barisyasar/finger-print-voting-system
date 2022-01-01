@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, FormGroup, Label, CardGroup, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button, Input } from 'reactstrap';
+import { Card, Label, CardGroup, CardImg, CardBody, CardTitle, Button, Input } from 'reactstrap';
 
 export default class Voter extends Component {
     render() {
