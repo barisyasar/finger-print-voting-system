@@ -7,7 +7,7 @@ export default function Results() {
 
     return (
         <div className='d-flex flex-column'>
-            <h5 className='align-self-start'>Reults</h5>
+            <h5 className='align-self-start'>Results</h5>
             <div className='m-2'>
                 {Candidates.map(candidate => {
                     return (

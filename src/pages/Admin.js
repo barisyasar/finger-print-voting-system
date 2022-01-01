@@ -12,10 +12,10 @@ export default class Admin extends Component {
                 <br />
                 <Candidate />
                 <hr />
-                    
-                    <Results/>
+
+                <Results />
                 <hr />
-                <Faulty/>
+                <Faulty />
             </div>
         )
     }
