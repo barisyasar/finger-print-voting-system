@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Admin from './pages/Admin';
+import PollingClerk from './pages/PollingClerk';
+import Voter from './pages/Voter';
+import Login from './pages/Login';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Finger Print Voting System</h1>
+
+      <BrowserRouter >
+        <Routes>
+          <Route exact path='/' element={<Login />} />
+          <Route path='/admin' element={<Admin />} />
+          <Route path='/pollingclerk'element={<PollingClerk />} />
+          <Route path='voter' element={<Voter />} />
+        </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
