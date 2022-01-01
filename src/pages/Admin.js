@@ -12,10 +12,8 @@ export default class Admin extends Component {
                 <br />
                 <Candidate />
                 <hr />
-                <section id='results' className='text-left d-flex'>
-                    <h5 >Reults</h5>
+                    
                     <Results/>
-                </section>
                 <hr />
                 <Faulty/>
             </div>
