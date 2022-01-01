@@ -16,7 +16,7 @@ function App() {
           <Route exact path='/' element={<Login />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/pollingclerk'element={<PollingClerk />} />
-          <Route path='voter' element={<Voter />} />
+          <Route path='/voter' element={<Voter />} />
         </Routes>
       </BrowserRouter>
 
