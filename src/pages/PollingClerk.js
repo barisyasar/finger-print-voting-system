@@ -3,15 +3,35 @@ import { Table,Input } from 'reactstrap';
 import { Voters } from '../db/voters';
 
 export default class PollingClerk extends Component {
-
+    constructor(props) {
+        super(props);
+        this.state={tallyCount:0}
+        this.onChecked= this.onChecked.bind(this);
+        
+    };
+    
+    onChecked(e) {
+       
+        if(e.target.checked) {
+            Voters.map(voter => voter.Id === parseInt(e.target.id) ? voter.situaion=true : voter.situaion);
+            window.alert(e.target.id +' is here. And now voting')
+            if(window.confirm('Approve the vote') === true) 
+                this.setState({tallyCount:this.state.tallyCount+1})
+        }
+        console.log(Voters);
+        
+    };
 
     render() {
+       
         const voterList = [];
         for (let voter of Voters) {
             voterList.push(
                 <tr>
                     <th scope="row">
-                    <Input type="checkbox" />
+                    <Input type="checkbox" id={voter.Id} onChange={e => {
+                        this.onChecked(e)
+                    }} />
                     </th>
                     <td>
                         {voter.Id}
@@ -29,7 +49,7 @@ export default class PollingClerk extends Component {
             <div>
                 <h2>Polling Clerk Page</h2>
                 <hr />
-                <div className='d-flex'>Tally Count: 10</div>
+                <div className='d-flex'>Tally Count: {this.state.tallyCount}</div>
                 <hr />
                 <Table
                     bordered

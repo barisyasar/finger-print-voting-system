@@ -4,8 +4,11 @@ import PollingClerk from './pages/PollingClerk';
 import Voter from './pages/Voter';
 import Login from './pages/Login';
 import './App.css';
+import { Candidates } from './db/candidates';
 
 function App() {
+  
+
   return (
     <div className="App">
       <h1>Finger Print Voting System</h1>
@@ -15,7 +18,7 @@ function App() {
           <Route exact path='/' element={<Login />} />
           <Route path='/admin' element={<Admin />} />
           <Route path='/pollingclerk'element={<PollingClerk />} />
-          <Route path='/voter' element={<Voter />} />
+          <Route path='/voter' element={<Voter Candidates={Candidates}/>} />
         </Routes>
       </BrowserRouter>
 
