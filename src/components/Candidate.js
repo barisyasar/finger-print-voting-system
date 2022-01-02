@@ -4,18 +4,7 @@ import { Input, Button } from 'reactstrap';
 export default function Candidate(props) {
 
     const [candidate, setCandidate] = useState('');
-    const [list, setlist] = useState(props.candidates);
 
-    const addCandidate = (candidate) => {
-        const can = {name: candidate,totalVote:0};
-        setlist(prevList => {
-            return {
-                name:candidate, totalVote: 0,
-                ...prevList,
-                
-            }
-        })
-    };
 
     return (
         <div>
@@ -28,7 +17,7 @@ export default function Candidate(props) {
                     className='m-2'
                     onChange={e => setCandidate(e.target.value)}
                 />
-                <Button className='m-2' onClick={() => addCandidate(candidate)}>
+                <Button className='m-2' onClick={() => props.addCandidate({name:candidate,totalVote:0})}>
                     Add
                 </Button>
             </div>
