@@ -8,12 +8,13 @@ Steps
 4. Code presentation
 ## Project Proposal
 It is an introduction to project. We explained our thoughts and plans to teachers.
-Proposal link
+<a href="./doc/CMPE313 Project Proposal.docx" target='_blank'>Project Proposal Details</a>
 ## Use Case Diagram
 In this step we started to apply our knowledge from the lessons. We defined our actors and their actions. We turned them into use case diagrams.
+<a href="./doc/CMPE313 ASSIGNMENT 2.pdf" target='_blank'>Use-Cases' Details</a>
 ## SRS Documentation
 We understood the importance of explanations for a real project and the importance of documentation, apart from coding in software in this part.
-SRS Link
+<a href="./doc/Fingerprint Voting System SRS.docx" target='_blank'>SRS Documentation Details</a>
 ## Code Presentation
 I used my react knowledge that I learned last summer.
 
